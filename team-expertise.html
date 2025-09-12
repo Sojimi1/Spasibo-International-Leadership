@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team Expertise - Spasibo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="assets1/css/fontawesome.css">
+    <link rel="stylesheet" href="assets1/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets1/css/owl.css">
+    <link rel="stylesheet" href="assets1/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  <!-- Custom Styles -->
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+
+
+
+.carousel-caption-custom {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: goldenrod;
+      text-shadow: 2px 2px 6px rgba(0,0,0,1.7);
+      padding: 0 5%;
+    }
+    .carousel-caption-custom h1 {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-weight: bold;
+    }
+    .carousel-caption-custom p {
+      font-size: clamp(0.9rem, 2vw, 1.25rem);
+      margin-top: 10px;
+    }
+
+
+
+ /* Navbar links */
+    .custom-nav-link {
+      font-weight: bold;
+      font-size: clamp(0.9rem, 1.1vw, 1rem);
+      margin: 0 10px;
+      padding: 6px 12px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      transition: all 0.3s ease-in-out;
+      color: black !important;
+    }
+    .custom-nav-link:hover {
+      background-color: purple;
+      color: white !important;
+      border-color: purple;
+    }
+    .custom-nav-link.disabled {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+
+
+   
+ 
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .section-heading p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .visit-country .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Main Content */
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .item .image {
+      flex: 1 1 200px;
+    }
+
+    .item .image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .item .right-content {
+      flex: 2 1 300px;
+    }
+
+    .right-content h4 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    .right-content span {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .main-button a {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #0077cc;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .main-button a:hover {
+      background: #005fa3;
+    }
+
+    .right-content p {
+      margin: 15px 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .info {
+      list-style: none;
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .info li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .text-button a {
+      font-size: 0.9rem;
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .text-button a:hover {
+      text-decoration: underline;
+    }
+
+    /* Pagination */
+    .page-numbers {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .page-numbers li a {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #444;
+      transition: 0.3s;
+    }
+
+    .page-numbers li.active a,
+    .page-numbers li a:hover {
+      background: #0077cc;
+      color: #fff;
+      border-color: #0077cc;
+    }
+
+    /* Sidebar Map */
+    .side-bar-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      border-radius: 12px;
+    }
+
+    /* Layout */
+    .visit-country .row > .col-left {
+      flex: 2 1 700px;
+    }
+
+    .visit-country .row > .col-right {
+      flex: 1 1 300px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      text-align: center;
+      background: #222;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .pic-card{
+      display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+    }
+
+    @media (max-width: 800px) {
+       
+.pic-card{
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+
+}}
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .visit-country .row {
+        flex-direction: column;
+      }
+      .item {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section-heading h2 {
+        font-size: 1.5rem;
+      }
+      .right-content h4 {
+        font-size: 1.2rem;
+      }
+      .main-button a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+
+
+    /* Responsive */
+    @media (max-width: 992px) {
+  .whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* stack content vertically */
+    text-align: center;
+  }
+
+  .whole {
+    width: 100%;
+    max-width: 900px; /* optional: keeps content from stretching too much */
+  }
+}
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+    
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+  
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand mx-auto d-lg-block" href="#">
+      <img src="Images/SPASIBO.png" width="200" height="90" class="img-fluid" alt="Spasibo Logo">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="our_services.html">Our Services</a></li>
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="ad-Board.html">Advisory Board</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle custom-nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Team Expertise</a>
+          <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="team-expertise.html">Diplomacy</a></li>
+            <li><a class="dropdown-item" href="team-expertise.html">Multilingual Communication</a></li>
+            <li><a class="dropdown-item" href="team-expertise.html">International Law</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="team-expertise.html">Youth Centric Leadership</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link disabled custom-nav-link" href="#">Disabled</a></li>
+      </ul>
+      <!-- Search -->
+      <form class="d-flex mt-3 mt-lg-0 ms-lg-3">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+  <div class="whole">
+
+<div class="visit-country">
+  <div class="container">
+    <div class="row">
+      <div class="col-left">
+        <div class="section-heading">
+          <h2>DIPLOMACY</h2>
+          <p>Spasibo International</p>
+        </div>
+
+        <div class="items">
+          <!-- Switzerland -->
+          <div class="item">
+            <div class="image">
+              <img src="Images/HE PELINAH.png" alt=""  style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              <h4>HE PELINAH GORATA
+PINAEMANG </h4>
+           
+              
+
+            </div>
+
+
+
+
+
+    <div class="item">
+            <div class="image">
+              <img src="Images/DR KEVIN.png" alt="" style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              <h4>LIAKH OLEG
+ALEXANDROVICH</h4>
+             
+             
+            </div>
+          </div>
+
+          </div>
+
+
+
+
+           <div class="section-heading">
+          <h2>MULTILINGUAL
+COMMUNICATION</h2>
+  <p>Spasibo International</p>
+        </div>
+
+          <!-- Caribbean -->
+          <div class="item">
+            <div class="image">
+              <img src="Images/TSHENOLO.png" alt="" style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              <h4>TSHENOLO
+MOKGWETSI</h4>
+             
+            </div>
+
+  <!-- France -->
+          <div class="item">
+            <div class="image">
+              <img src="Images/SHINE TLAPE1.png" alt="" style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              <h4>SHINE TLAPE</h4>
+     
+              
+            </div>
+          </div>
+
+
+
+          </div>
+
+        
+
+
+
+
+
+
+
+           <div class="section-heading">
+          <h2>YOUTH CENTRIC
+LEADERSHIP</h2>
+  <p>Spasibo International</p>
+        </div>
+
+           <div class="item">
+            <div class="image">
+              <img src="Images/ENG. MESFIN.png" alt="" style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              <h4>ENG. MESFIN
+DESSIE</h4>
+           
+              
+            </div>
+
+            <div class="item">
+            <div class="image">
+              <img src="Images/ANDREAS.png" alt="" style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              
+          <h4>ANDREAS MARUNGU</h4>
+
+            </div>
+          </div>
+          </div>
+
+
+
+           
+
+
+          
+           <div class="section-heading">
+          <h2>INTERNATIONAL LAW</h2>
+  <p>Spasibo International</p>
+        </div>
+
+           <div class="item">
+            <div class="image">
+              <img src="Images/DR KEVIN1.png" alt="" style="width: 200px; height: 200px;">
+            </div>
+            <div class="right-content">
+              <h4>DR KEVIN DE-RIDDER</h4>
+         
+ 
+            </div>
+          </div>
+
+
+
+
+          
+
+
+          
+
+
+
+
+
+
+
+
+
+
+ <div class="w3-col l4">
+      <!-- About Card -->
+       <div class="pic-card">
+      <div class="w3-white w3-margin">
+        <img src="Images/ivan.png" alt="Jane" style="width:100%" class="w3">
+        <div class="w3-container w3-blue">
+          <h4>IVAN TANASOV</h4>
+          <h6>DIRECTOR - KLUCHVESKY CENTERPENZA REGIONSAVSAN</h6>
+          <p style="color: white; ;"><b>The Kluchvesky Center in Penza stands as aleading institution 
+            committed to pioneeringscientific research and development,playing a vital role in advancing 
+            the Penzaregion and beyond. As a dynamic hubdedicated to fostering collaboration,sharing
+             knowledge, and drivingtechnological innovation. It represents theboundaries of scientific 
+             inquiry, creativetransformative solutions, and cultivation ofa vibrant environment for 
+             interdisciplinarycollaboration, especially in the fields ofprogramming and 3D design.
+              </b>
+            </p>
+         </div>
+       </div>
+
+
+
+        <div class="w3-white w3-margin">
+        <img src="Images/SAVSAN.png" alt="Jane" style="width:100%" class="w3">
+        <div class="w3-container w3-blue">
+          <h4>SAVSAN YUSOPOVA</h4>
+          <h6>LEADING HR SPECIALIST- ALABUGA SPECIAL ECONOMIC ZONEKAZAN, TATARSTAN REGION</h6>
+          <p style="color: white; ;"><b>ALABUGA Special Economic Zone (SEZ)is Russia's largest and most successfulspecial economic zone, 
+            strategicallylocated in the Republic of Tatarstan.Established to attract foreign 
+            anddomestic investment, foster industrialdevelopment, and promote technologicalinnovation, 
+            ALABUGA provides acomprehensive ecosystem forbusinesses looking to establish orexpand their operations.
+              </b>
+            </p>
+         </div>
+       </div>
+
+
+      
+
+  
+        <div class="w3-white w3-margin">
+        <img src="Images/DAN.png" alt="Jane" style="width:100%" class="w3">
+        <div class="w3-container w3-blue">
+          <h4>DANIL BISSLINGER</h4>
+          <h6>FORMER DIRECTOR GENERAL -WORLD YOUTH FESTIVAL DIRECTORATEMOSCOWIVAN</h6>
+          <p style="color: white; ;"><b>The World Youth Festival Directorate is the 
+            central organizing andexecutive body responsible for the planning, 
+            coordination, andsuccessful execution of the biennial World Youth 
+            Festival.Comprised of dedicated professionals and youth leaders 
+            fromdiverse backgrounds, the Directorate operates under a mandate 
+            tofoster global youth engagement, promote cultural exchange, 
+            andempower the next generation of leaders. It was founded by 
+            Presidential Decree by President Vladimir Putin.
+              </b>
+            </p>
+         </div>
+       </div>
+
+
+</div>
+
+         
+        </div>
+      </div>
+
+      <div class="col-right">
+        <div class="side-bar-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer> 
+&copy; &nbsp; <b>2025 Spasibo International </b>
+<p>Powered by <a href="#" target="_blank">Spasibo International Leadership</a></p>
+ <p style="text-align: center;"> https://www.linkedin.com/in/pelinah-gorata-pinaemang-a65983156+</p>
+ <p style="text-align: center;"> +267 78678698</p></footer>
+</div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
