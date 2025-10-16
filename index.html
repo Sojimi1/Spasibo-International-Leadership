@@ -82,9 +82,16 @@ body {font-family: "Open Sans"}
   align-items: center;
 
 }}
-.p_container1{
- 
+#webinar{
+  box-shadow: 0 0 70px rgba(0,123,255,0.7);
+  transition: box-shadow 0.3s ease-in-out;
 }
+#webinar:hover{
+ background-color: red;
+ border: 2;
+ width: 200px;
+}
+
 </style>
 </head>
 <body class="w3-light-grey">
@@ -640,10 +647,12 @@ ENDORSEMENTS</h4>
     <span onclick="document.getElementById('midAd').style.display='none'" 
           class="fa fa-remove w3-button w3-xlarge w3-red"
           style="position:absolute; top:-15px; right:-15px; z-index:10000;"></span>
-    
+    <div>
     <img src="Images/webinar1.jpg" alt="Ad" style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
-    
-    <img src="Images/webinar1.jpg" alt="Ad" style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+   <a target="_blank" href=" https://meet.google.com/ucu-hngo-nqp">
+      <img border="0" src="https://calendar.google.com/calendar/images/ext/gc_button1_en.gif" alt="Google Calendar"> <button id="webinar" style="background-color: aqua; border-radius: 20px;"><p style="color: red;">JOIN US ON GOOGLE MEET NOW!!!</p></button></a> 
+  </div>
+   
   </div>
 </div>
 
